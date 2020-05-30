@@ -1,0 +1,18 @@
+.button-yellow {
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 20px;
+    outline: none !important;
+    box-shadow: none !important;
+    background: #dca320;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.button-yellow:hover {
+    background: #927228;
+    color: #fff;
+}

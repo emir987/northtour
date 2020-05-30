@@ -1,0 +1,134 @@
+{
+    "eng": {
+        "navbar": [
+            "Home",
+            "Offer",
+            "Gallery",
+            "About us",
+            "Contact"
+        ],
+        "navbarDropdown": {
+            "slike": "pictures"
+        },
+        "buttons": {
+            "ponude": "offers",
+            "opsirnije": "more",
+            "pogledajJos": "check out more",
+            "pretplatiSe": "subscribe",
+            "saznajVise": "learn more",
+            "posaljite": "send"
+        },
+        "placeholders": ["Subject", "Your email", "First name and surname", "Message"],
+        "oNama": "About us",
+        "vasPouzdanDomacin": "North your montenegro - Your trustworthy host",
+        "pronadjiteNas": "Find us",
+        "kontaktirajteNasTekst": "Contact us, and we will respond as soon as possible.",
+        "budiDioAvanture": "Be part of our adventure",
+        "galerija": "Gallery",
+        "fotoGalerija": {
+            "naslov": "Photo gallery",
+            "rafting": "Rafting tours",
+            "biking": "Biking",
+            "kanjoning": "Canyoning",
+            "dzipSafari": "Jeep Safari",
+            "hiking": "Hiking"
+        },
+        "videoGalerija": "Video gallery",
+        "ponude": "Offers",
+        "ponudeSection": {
+            "ponudeHeader": "Our offers",
+            "dzipSafari": {
+                "naslov": "Jeep safari",
+                "opis": "4x4 field trips led by our professional guides and allow you to walk through the untouched part of nature. Join exciting rides in the mountains."
+            },
+            "biking": {
+                "naslov": "Biking",
+                "opis": "We have carefully designed a large number of cycling tours that will allow you to see the natural beauties from all angles."
+            },
+            "hiking": {
+                "naslov": "Hiking",
+                "opis": "Hike with us and explore all the beauties of our country."
+            },
+            "kanjoning": {
+                "naslov": "Canyoning",
+                "opis": "With this adventurous activity you will have the opportunity to climb down into the canyons of rivers that have been grinding for thousands of years."
+            },
+            "rafting": {
+                "naslov": "Rafting",
+                "opis": "Rafting on wild rivers along with a variety of multi-day activities and socializing. As one of the most popular types of active holidays, rafting is the perfect combination of adrenaline enjoying and relaxing in nature."
+            },
+            "ostalePonude": {
+                "naslov": "Other offers"
+            }
+        },
+        "pretplatiSeText": "Subscribe for Newsletter",
+        "svaPrava": "© All rights reserved 2019 Northtour"
+
+    },
+    "cg": {
+        "navbar": [
+            "Početna",
+            "Ponuda",
+            "Galerija",
+            "O nama",
+            "Kontakt"
+        ],
+        "navbarDropdown": {
+            "slike": "slike"
+        },
+        "buttons": {
+            "ponude": "ponude",
+            "opsirnije": "opširnije",
+            "pogledajJos": "pogledajte još",
+            "pretplatiSe": "pretplati se",
+            "saznajVise": "saznaj više",
+            "posaljite": "pošaljite"
+        },
+        "placeholders": ["Predmet", "Vaš email", "Ime i prezime", "Poruka"],
+        "oNama": "O nama",
+        "vasPouzdanDomacin": "North your montenegro - Vaš pouzdan domacin",
+        "pronadjiteNas": "Pronađite nas",
+        "kontaktirajteNasTekst": "Kontaktirajte nas, a mi ćemo odgovoriti u najkraćem roku.",
+        "budiDioAvanture": "Budi dio naše avanture",
+        "galerija": "Galerija",
+        "fotoGalerija": {
+            "naslov": "Foto galerija",
+            "rafting": "Rafting ture",
+            "biking": "Biking",
+            "kanjoning": "Kanjoning",
+            "dzipSafari": "Dzip Safari",
+            "hiking": "Pješačke ture"
+        },
+        "videoGalerija": "Video galerija",
+        "ponude": "Ponude",
+        "ponudeSection": {
+            "ponudeHeader": "Naše ponude",
+            "dzipSafari": {
+                "naslov": "Dzip safari",
+                "opis": "4x4 terenske ture koje vode naši profesionalni vodiči i omogućavaju vam da prodjete kroz netaknuti dio prirode. Prudruzite se uzbudljivim vožnjama planinskim prostranstvima."
+            },
+            "biking": {
+                "naslov": "Biking",
+                "opis": "Pažljivo smo osmislili veliki broj biciklistih tura koje će vam omogućiti da vidite prirodne ljepote iz svih uglova."
+            },
+            "hiking": {
+                "naslov": "Hiking",
+                "opis": "Pješačite sa nama i istražite sve ljepote naše zemlje."
+            },
+            "kanjoning": {
+                "naslov": "Kanjoning",
+                "opis": "Uz ovu avanturističku aktivnost imaćete priliku da se spuštate u kanjonima rijeka koji su hiljadama godina brusili."
+            },
+            "rafting": {
+                "naslov": "Rafting",
+                "opis": "Splavarite na divljim rijekama uz razne višednevne aktivnosti i druženja. Kao jedan od najpopularnijih vidova aktivnog odmora, rafting je savršena kombinacija adrenalinskog uživanja i odmaranja u prirodi."
+            },
+            "ostalePonude": {
+                "naslov": "Ostale ponude"
+            }
+        },
+        "pretplatiSeText": "Pretplati se za bilten",
+        "svaPrava": "© Sva prava zadržana 2019 Northtour"
+
+    }
+}

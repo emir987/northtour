@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadatak1</title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg fixed-top white-nav" style="height: 87px;">
+
+            <a class="nav-link navbar-brand" href="index.html"><img id="logo-image" src="img/logo.png"
+                    style="max-width: 200px;" alt="logo" /></a>
+
+            <button id="toggle-hamburger" class="navbar-toggler my-2 ml-auto" tycustom data-toggle="collapse"
+                data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div id="nav-icon1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <div class="conatiner-fluid w-100">
+                <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03"
+                    style="height: 65px;">
+                    <ul class="navbar-nav ml-auto mt-4 mt-lg-0">
+                        <li class="nav-item nav-item-bottom">
+                            <a class="nav-link" href="index.html">početna</a>
+                        </li>
+                        <li class="nav-item nav-item-bottom">
+                            <a class="nav-link" href="ponuda.html">ponuda</a>
+                        </li>
+                        <li class="nav-item dropdown nav-item-bottom">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">galerija</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="slike-drop" href="galerija.html">slike</a></li>
+                                <li><a href="videoGalerija.html">video</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-bottom">
+                            <a class="nav-link" href="about.html">o nama</a>
+                        </li>
+                        <li class="nav-item nav-item-bottom">
+                            <a class="nav-link" href="kontakt.html">kontakt</a>
+                        </li>
+
+                        <li class="d-flex mobile-center">
+                            <div id="cg" onclick="language('cg')" class="nav-link active-lang"
+                                style="padding-right: 0 !important;" data-toggle="collapse"
+                                data-target="#navbarTogglerDemo03">cg</div>
+                            <span class="nav-link m-0"
+                                style="color: #dca320 !important; padding:12px 0 !important;">|</span>
+                            <div id="eng" onclick="language('eng')" class="nav-link" style="padding-left: 0!important;"
+                                data-toggle="collapse" data-target="#navbarTogglerDemo03">
+                                eng</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="gallery-section" style="margin-top: 120px;">
+            <h1 id="foto-header" class="header-text py-5 mb-5 text-center main-header-text">Foto
+                galerija
+            </h1>
+            <div class="container">
+                <div class="row">
+
+                    <!-- gallery 1 -->
+                    <div class="col-lg-4 col-md-6 p-3">
+                        <div class="gallery-section">
+                            <a href="img/RaftingGallery1.jpg" data-fancybox="rafting-ture">
+                                <img style="width: 100%;" src="img/RaftingGallery1.jpg" alt="rafting-gallery" />
+                                <div class="gallery-cover"
+                                    style="padding: 20%; display: flex; justify-content: center; align-items: center;">
+                                    <h1 id="rafting-gallery" class="gallery-header">Rafing ture</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- gallery 2 -->
+                    <div class="col-lg-4 col-md-6 p-3">
+                        <div class="gallery-section">
+                            <a href="img/BikingGallery1.jpg" data-fancybox="biking-ture">
+                                <img style="width: 100%;" src="img/BikingGallery1.jpg" alt="biking-gallery" />
+                                <div class="gallery-cover"
+                                    style="padding: 20%; display: flex; justify-content: center; align-items: center;">
+                                    <h1 id="biking-gallery" class="gallery-header">Biking</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- gallery 3 -->
+                    <div class="col-lg-4 col-md-6 p-3">
+                        <div class="gallery-section">
+                            <a href="img/KanjoningGallery0.jpg" data-fancybox="kanjoning-ture">
+                                <img style="width: 100%;" src="img/KanjoningGallery0.jpg" alt="kanjoning-gallery" />
+                                <div class="gallery-cover"
+                                    style="padding: 20%; display: flex; justify-content: center; align-items: center;">
+                                    <h1 id="kanjoning-gallery" class="gallery-header">Kanjoning</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- gallery 4 -->
+                    <div class="col-lg-4 col-md-6 p-3">
+                        <div class="gallery-section">
+                            <a href="img/KanjoningGallery0.jpg" data-fancybox="safari-ture">
+                                <img style="width: 100%;" src="img/SafariGallery1.jpg" alt="safari-gallery" />
+                                <div class="gallery-cover"
+                                    style="padding: 20%; display: flex; justify-content: center; align-items: center;">
+                                    <h1 id="safari-gallery" class="gallery-header">Dzip Safari</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- gallery 5 -->
+                    <div class="col-lg-4 col-md-6 p-3">
+                        <div class="gallery-section">
+                            <a href="img/PjesackaTuraGallery1.jpg" data-fancybox="pjesacke-ture">
+                                <img style="width: 100%;" src="img/PjesackaTuraGallery1.jpg"
+                                    alt="pjesacke-ture-gallery" />
+                                <div class="gallery-cover"
+                                    style="padding: 20%; display: flex; justify-content: center; align-items: center;">
+                                    <h1 id="hiking-gallery" class="gallery-header">Pješačke ture</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- gallery 1 -->
+            <a class="d-none" href="img/RaftingGallery2.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery2.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery3.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery3.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery4.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery4.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery5.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery5.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery6.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery6.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery7.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery7.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery8.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery8.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery9.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery9.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery10.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery10.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery11.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery11.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery12.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery12.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery13.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery13.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/RaftingGallery14.jpg" data-fancybox="rafting-ture">
+                <img src="img/RaftingGallery14.jpg" alt="" />
+            </a>
+
+            <!-- gallery 2 -->
+            <a class="d-none" href="img/BikingGallery2.jpg" data-fancybox="biking-ture">
+                <img src="img/BikingGallery2.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/BikingGallery3.jpg" data-fancybox="biking-ture">
+                <img src="img/BikingGallery3.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/BikingGallery4.jpg" data-fancybox="biking-ture">
+                <img src="img/BikingGallery4.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/BikingGallery5.jpg" data-fancybox="biking-ture">
+                <img src="img/BikingGallery5.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/BikingGallery6.jpg" data-fancybox="biking-ture">
+                <img src="img/BikingGallery6.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/BikingGallery7.jpg" data-fancybox="biking-ture">
+                <img src="img/BikingGallery7.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/BikingGallery8.jpg" data-fancybox="biking-ture">
+                <img src="img/BikingGallery8.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/BikingGallery9.jpg" data-fancybox="biking-ture">
+                <img src="img/BikingGallery9.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/BikingGallery10.jpg" data-fancybox="biking-ture">
+                <img src="img/BikingGallery10.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/BikingGallery11.jpg" data-fancybox="biking-ture">
+                <img src="img/BikingGallery11.jpg" alt="" />
+            </a>
+
+            <!-- gallery 3 -->
+            <a class="d-none" href="img/KanjoningGallery2.jpg" data-fancybox="kanjoning-ture">
+                <img src="img/KanjoningGallery2.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/KanjoningGallery3.jpg" data-fancybox="kanjoning-ture">
+                <img src="img/KanjoningGallery3.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/KanjoningGallery4.jpg" data-fancybox="kanjoning-ture">
+                <img src="img/KanjoningGallery4.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/KanjoningGallery5.jpg" data-fancybox="kanjoning-ture">
+                <img src="img/KanjoningGallery5.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/KanjoningGallery6.jpg" data-fancybox="kanjoning-ture">
+                <img src="img/KanjoningGallery6.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/KanjoningGallery7.jpg" data-fancybox="kanjoning-ture">
+                <img src="img/KanjoningGallery7.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/KanjoningGallery8.jpg" data-fancybox="kanjoning-ture">
+                <img src="img/KanjoningGallery8.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/KanjoningGallery9.jpg" data-fancybox="kanjoning-ture">
+                <img src="img/KanjoningGallery9.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/KanjoningGallery10.jpg" data-fancybox="kanjoning-ture">
+                <img src="img/KanjoningGallery10.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/KanjoningGallery11.jpg" data-fancybox="kanjoning-ture">
+                <img src="img/KanjoningGallery11.jpg" alt="" />
+            </a>
+
+            <!-- gallery 4 -->
+            <a class="d-none" href="img/SafariGallery2.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery2.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery3.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery3.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery4.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery4.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery5.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery5.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery6.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery6.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery7.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery7.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery8.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery8.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery9.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery9.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery10.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery10.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery11.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery11.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery12.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery12.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery13.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery13.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery14.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery14.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery15.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery15.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery16.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery16.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery17.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery17.jpg" alt="" />
+            </a>
+            <a class="d-none" href="img/SafariGallery18.jpg" data-fancybox="safari-ture">
+                <img src="img/SafariGallery18.jpg" alt="" />
+            </a>
+
+            <!-- gallery 5 -->
+            <a class="d-none" href="img/PjesackaTuraGallery2.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery2.jpg" />
+            </a>
+            <a class="d-none" href="img/PjesackaTuraGallery3.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery3.jpg" />
+            </a>
+            <a class="d-none" href="img/PjesackaTuraGallery4.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery4.jpg" />
+            </a>
+            <a class="d-none" href="img/PjesackaTuraGallery5.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery5.jpg" />
+            </a>
+            <a class="d-none" href="img/PjesackaTuraGallery6.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery6.jpg" />
+            </a>
+            <a class="d-none" href="img/PjesackaTuraGallery7.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery7.jpg" />
+            </a>
+            <a class="d-none" href="img/PjesackaTuraGallery8.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery8.jpg" />
+            </a>
+            <a class="d-none" href="img/PjesackaTuraGallery9.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery9.jpg" />
+            </a>
+            <a class="d-none" href="img/PjesackaTuraGallery10.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery10.jpg" />
+            </a>
+            <a class="d-none" href="img/PjesackaTuraGallery11.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery11.jpg" />
+            </a>
+            <a class="d-none" href="img/PjesackaTuraGallery12.jpg" data-fancybox="pjesacke-ture">
+                <img src="img/PjesackaTuraGallery12.jpg" />
+            </a>
+
+        </div>
+
+        <!-- Modal news -->
+
+        <div class="modal fade modal-news-output" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Prijava</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Uspješno ste se prijavili. Od sada ćete dobijati sva obavještenja na vašoj email adresi.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer container-fluid">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-12">
+                    <div class="row d-flex align-items-center pt-5">
+                        <div class="col-6">
+                            <div class="d-flex flex-column">
+                                <div id="budi-dio-avanture" class="footer-text-left">Budi dio naše avanture</div>
+                                <div>
+                                    <a href="https://www.facebook.com/northtourmontenegro/">
+                                        <svg width="50" version="1.1" id="Design" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 800 800"
+                                            style="enable-background:new 0 0 800 800; fill: white;" xml:space="preserve"
+                                            class="mt-3 svg">
+                                            <g>
+                                                <g>
+                                                    <path class="st0"
+                                                        d="M407.9,700.6c-166.8,0-302.6-135.7-302.6-302.6c0-166.8,135.7-302.6,302.6-302.6
+                                                 c166.8,0,302.6,135.7,302.6,302.6C710.5,564.8,574.7,700.6,407.9,700.6z M407.9,128C259,128,137.9,249.1,137.9,398
+                                                 c0,148.9,121.1,270,270.1,270c148.9,0,270-121.1,270-270C678,249.1,556.8,128,407.9,128z" />
+                                                </g>
+                                                <g>
+                                                    <path class="st1"
+                                                        d="M360.5,399.4v175.4c0,2.5,2,4.6,4.6,4.6h65.1c2.5,0,4.6-2,4.6-4.6V396.6h47.2c2.4,0,4.4-1.8,4.6-4.2l4.5-53.7
+                                                 c0.2-2.7-1.9-5-4.6-5h-51.7v-38.1c0-8.9,7.2-16.2,16.2-16.2h36.4c2.5,0,4.6-2,4.6-4.6v-53.7c0-2.5-2-4.6-4.6-4.6h-61.5
+                                                 c-36.1,0-65.3,29.2-65.3,65.3v51.8h-32.6c-2.5,0-4.6,2-4.6,4.6V392c0,2.5,2,4.6,4.6,4.6h32.6V399.4z" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/northtourmontenegro/">
+                                        <svg width="50" version="1.1" id="Design" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 800 800"
+                                            style="enable-background:new 0 0 800 800; fill: white;" xml:space="preserve"
+                                            class="mt-3 svg">
+                                            <g>
+                                                <path class="st0"
+                                                    d="M392.9,693.1c-164.9,0-299-134.1-299-299c0-164.9,134.1-299,299-299c164.9,0,299,134.1,299,299
+                                             C691.9,559,557.8,693.1,392.9,693.1z M392.9,123.6c-149.2,0-270.6,121.4-270.6,270.6c0,149.2,121.4,270.6,270.6,270.6
+                                             s270.6-121.4,270.6-270.6C663.5,245,542.1,123.6,392.9,123.6z M493.7,272.9c-12.2,0-22.1,9.9-22.1,22.1c0,12.2,9.9,22.1,22.1,22.1
+                                             s22.1-9.9,22.1-22.1C515.8,282.8,505.9,272.9,493.7,272.9z M395.4,301.2c-51.2,0-92.9,41.7-92.9,92.9s41.7,92.9,92.9,92.9
+                                             s92.9-41.7,92.9-92.9S446.6,301.2,395.4,301.2z M395.4,453.7c-32.8,0-59.5-26.7-59.5-59.5s26.7-59.5,59.5-59.5s59.5,26.7,59.5,59.5
+                                             S428.2,453.7,395.4,453.7z M582.9,316.9c0-62.6-50.8-113.3-113.4-113.3H319.9c-62.6,0-113.4,50.7-113.4,113.3v149.6
+                                             c0,62.6,50.7,113.3,113.4,113.3h149.6c62.6,0,113.4-50.7,113.4-113.3V316.9z M547.4,466.6c0,43-34.9,77.8-77.9,77.8H319.9
+                                             c-43,0-77.9-34.9-77.9-77.8V316.9c0-43,34.9-77.8,77.9-77.8h149.6c43,0,77.9,34.9,77.9,77.8V466.6z" />
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 form-info">
+                            <span>Mojkovacka bb, Kolasin</span>
+                            <br>
+                            <br>
+                            <span>
+                                <a href="tel:+382 67 046 880" target="_blank">
+                                    +382 67 046 880 </a>
+                            </span>
+                            <br>
+                            <span>
+                                <a href="tel:+382 20 862 952" target="_blank">
+                                    +382 20 862 952 </a>
+                            </span>
+                            <br>
+                            <span>
+                                <a href="tel:+382 67 022 033" target="_blank">
+                                    +382 67 022 033 </a>
+                            </span>
+                            <br>
+                            <br>
+                            <span>
+                                <a href="mailto:info@northtour.me" target="_blank">
+                                    info@northtour.me </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-5">
+                        <p id="pretplati-se-text">Pretplati se za bilten</p>
+                        <form action="" id="newsletter">
+                            <div class="row">
+                                <div class="col-lg-7 col-sm-8 offset-sm-2 pb-4">
+                                    <input type="email" name="email" id="emailNewsletter"
+                                        class="form-control text-center" placeholder="email">
+                                    <div class="error hide-error"></div>
+                                </div>
+                                <div class="col-lg-4 pb-4 text-center">
+                                    <input type="submit" class="btn button-yellow pretplati-se"
+                                        value="pretplati se"></input>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="map" class="col-lg-7 col-md-6 col-12 w-100" style="min-height: 420px; position: relative;">
+                </div>
+            </div>
+        </div>
+
+        <section id="footer2" style="background: #000; color: #fff">
+            <div class="container-fluid" id="footer2_change_width">
+                <div class="d-flex justify-content-between pt-3 footer-bottom">
+                    <p id="sva-prava">© All rights reserved 2019 Northtour</p>
+                    <p>Powered by
+                        <a href="https://www.amplitudo.me" style="color: rgb(46,174,169);">
+                            Amplitudo
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </footer>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script>
+        $('[data-fancybox="gallery"]').fancybox({
+            keyboard: true,
+            arrows: true,
+            smallBtn: true
+        });
+        $.fancybox.defaults.animationEffect = "fade";
+    </script>
+    <script defer src="js/custom-js.js"></script>
+
+    <script>
+        function initMap() {
+
+            var locationCenter = {
+                lat: 42.538,
+                lng: 19.134
+            };
+            var location = {
+                lat: 42.538,
+                lng: 19.134
+            };
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 13,
+                center: locationCenter,
+
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA24MlF2C49kzFRdQLINiiBSZoBvF9HNm4&callback=initMap">
+    </script>
+
+    <script>
+        const animateElements = document.getElementsByClassName('animate');
+
+        $(window).scroll(function () {
+
+            for (let index = 0; index < animateElements.length; index++) {
+                const element = animateElements[index];
+                if ($(document).scrollTop() + window.innerHeight > element.offsetTop) {
+                    element.classList.add('animate-left');
+                    element.nextElementSibling.classList.add('animate-right');
+                }
+            }
+        });
+
+
+        function language(language) {
+
+            if (language == "eng") {
+                document.getElementById('eng').classList.add('active-lang');
+                document.getElementById('cg').classList.remove('active-lang');
+            } else if (language == "cg") {
+                document.getElementById('cg').classList.add('active-lang');
+                document.getElementById('eng').classList.remove('active-lang');
+            }
+
+            $.ajax({
+                type: 'GET',
+                url: 'json/json-prevod.json',
+
+                success: function (response) {
+
+                    const json = JSON.parse(JSON.stringify(response[language]));
+                    const navLinkElements = document.querySelectorAll('.nav-item> a');
+                    const dropSlike = document.getElementById('slike-drop');
+
+                    const pretplatiSeButton = document.getElementsByClassName('pretplati-se')[0];
+
+                    const fotoHeader = document.getElementById('foto-header');
+                    const dzipSafari = document.getElementById('safari-gallery');
+                    const biking = document.getElementById('biking-gallery');
+                    const hiking = document.getElementById('hiking-gallery');
+                    const kanjoning = document.getElementById('kanjoning-gallery');
+                    const rafting = document.getElementById('rafting-gallery');
+
+                    const budiDioAvanture = document.getElementById('budi-dio-avanture');
+
+                    const pretplatiSe = document.getElementById('pretplati-se-text')
+                    const svaPrava = document.getElementById('sva-prava');
+
+
+                    navLinks = json.navbar;
+                    for (let index = 0; index < navLinkElements.length; ++index) {
+                        navLinkElements[index].text = navLinks[index];
+                    }
+                    dropSlike.text = json.navbarDropdown.slike;
+
+                    fotoHeader.innerHTML = json.fotoGalerija.naslov;
+                    dzipSafari.innerHTML = json.fotoGalerija.dzipSafari;
+                    biking.innerHTML = json.fotoGalerija.biking;
+                    hiking.innerHTML = json.fotoGalerija.hiking;
+                    kanjoning.innerHTML = json.fotoGalerija.kanjoning;
+                    rafting.innerHTML = json.fotoGalerija.rafting;
+
+                    pretplatiSeButton.value = json.buttons.pretplatiSe;
+
+                    budiDioAvanture.innerHTML = json.budiDioAvanture;
+                    pretplatiSe.innerHTML = json.pretplatiSeText;
+                    svaPrava.innerHTML = json.svaPrava;
+
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

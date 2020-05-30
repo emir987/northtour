@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadatak1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/select2.min.css">
+    <script src="js/select2.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/carosuel-custom.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/file-photo.css">
+    <link rel="stylesheet" href="css/select-2-custom.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/custom-checkbox.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .index-top-nav {
+            background-color: rgba(0, 0, 0, 0);
+            transform: translateY(40px);
+        }
+
+        .index-top-nav {
+            background-color: rgba(0, 0, 0, 0);
+            transform: translateY(40px);
+        }
+
+        .navbar {
+            transition: all .3s;
+        }
+
+        @media only screen and (min-width: 991px) {
+            .index-top-nav .nav-link {
+                color: white !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <nav id="nav-animate" class="navbar navbar-expand-lg fixed-top index-top-nav" style="height: 87px;">
+
+            <a class="navbar-brand" href="index.html"><img id="logo-image" src="img/logo_white.png"
+                    style="max-width: 200px;" alt="logo" /></a>
+
+            <button id="toggle-hamburger" class="navbar-toggler my-2 ml-auto" tycustom data-toggle="collapse"
+                data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div id="nav-icon1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <div class="conatiner-fluid w-100">
+                <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03"
+                    style="height: 65px;">
+                    <ul class="navbar-nav ml-auto mt-4 mt-lg-0">
+                        <li class="nav-item nav-item-bottom">
+                            <a class="nav-link" href="#">početna</a>
+                        </li>
+                        <li class="nav-item nav-item-bottom">
+                            <a class="nav-link" href="ponuda.html">ponuda</a>
+                        </li>
+                        <li class="nav-item dropdown nav-item-bottom">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">galerija</a>
+                            <ul class="dropdown-menu">
+                                <li><a id="slike-drop" href="galerija.html">slike</a></li>
+                                <li><a href="videoGalerija.html">video</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-bottom">
+                            <a class="nav-link" href="about.html">o nama</a>
+                        </li>
+                        <li class="nav-item nav-item-bottom">
+                            <a class="nav-link" href="kontakt.html">kontakt</a>
+                        </li>
+
+                        <li class="d-flex mobile-center">
+                            <div id="cg" onclick="language('cg')" class="nav-link active-lang"
+                                style="padding-right: 0 !important;" data-toggle="collapse"
+                                data-target="#navbarTogglerDemo03">cg</div>
+                            <span class="nav-link m-0"
+                                style="color: #dca320 !important; padding:12px 0 !important;">|</span>
+                            <div id="eng" onclick="language('eng')" class="nav-link" style="padding-left: 0!important;"
+                                data-toggle="collapse" data-target="#navbarTogglerDemo03">
+                                eng</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="section-top">
+            <div class="video-overlay">
+                <button id="ponude-button" class="btn button-yellow mt-5" href="#">ponude</button>
+            </div>
+            <div style="position: absolute; width: 100%; height: 100%; z-index: -1; top: 0;">
+                <video id="video" src="video/northtourvideo.mp4" autoplay muted loop
+                    style="width: 100%; height: 100%; object-fit: cover">
+                </video>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="section-o-nama">
+            <img src="img/ONamaBackground.svg" alt="">
+            <div class="container">
+                <div class="section-o-nama-text">
+                    <h1 id="o-nama" class="header-text">O nama</h1>
+                    <div class="description">
+                        <p id="vas-pouzdan-domacin">North Tour Montenegro - Vas pouzdan domacin</p>
+                        ...
+                    </div>
+                    <button opsirnije-button class="btn button-yellow opsirnije-button" href="#">opširnije</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="carousel-section">
+
+            <h1 id="ponude" class="header-text mb-5 text-center">Ponude</h1>
+
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img class="carousel-image" src="img/Carousel1.jpg" alt="">
+                    <div class="caousel-cover">
+                        <div class="carousel-text">
+                            <div id="dzip-safari" class="photo-header">Dzip safari</div>
+                            <button class="btn button-yellow opsirnije-button" href="#">opširnije</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="carousel-image" src="img/Carousel2.jpg" alt="">
+                    <div class="caousel-cover">
+                        <div class="carousel-text">
+                            <div id="biking" class="photo-header">Biking</div>
+                            <button class="btn button-yellow opsirnije-button" href="#">opširnije</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="carousel-image" src="img/Carousel3.jpg" alt="">
+                    <div class="caousel-cover">
+                        <div class="carousel-text">
+                            <div id="hiking" class="photo-header">Hiking</div>
+                            <button class="btn button-yellow opsirnije-button" href="#">opširnije</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="carousel-image" src="img/Carousel4.jpg" alt="">
+                    <div class="caousel-cover">
+                        <div class="carousel-text">
+                            <div id="kanjoning" class="photo-header">Kanjoning</div>
+                            <button class="btn button-yellow opsirnije-button" href="#">opširnije</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="carousel-image" src="img/Carousel5.jpg" alt="">
+                    <div class="caousel-cover">
+                        <div class="carousel-text">
+                            <div id="rafting" class="photo-header">Rafting</div>
+                            <button class="btn button-yellow opsirnije-button" href="#">opširnije</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="carousel-image" src="img/Carousel6.jpg" alt="">
+                    <div class="caousel-cover">
+                        <div class="carousel-text">
+                            <div id="ostale-ponude" class="photo-header">Ostale ponude</div>
+                            <button class="btn button-yellow opsirnije-button" href="#">opširnije</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section-gallery">
+            <h1 id="galerija" class="header-text mb-5 text-center">Galerija</h1>
+
+            <div class="gallery">
+                <div>
+                    <div class="d-flex flex-column">
+                        <img src="img/slika1Gallery.png" alt="">
+                        <img src="img/slika2Gallery.png" class="mobile-gallery-none" alt="">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="d-flex flex-column">
+                        <img src="img/slika3Gallery.png" alt="">
+                        <img src="img/slika4Gallery.png" alt="">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="d-flex flex-column">
+                        <img src="img/slika5Gallery.png" class="mobile-gallery-none" alt="">
+                        <img src="img/slika6Gallery.png" class="mobile-gallery-none" alt="">
+                    </div>
+                </div>
+
+                <div class="text-center my-3 d-none mobile-gallery-block">
+                    <button id="pogledaj-jos" class="btn button-yellow opsirnije-button">pogledaj još</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Modal news -->
+
+        <div class="modal fade modal-news-output" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Prijava</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Uspješno ste se prijavili. Od sada ćete dobijati sva obavještenja na vašoj email adresi.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer container-fluid">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-12">
+                    <div class="row d-flex align-items-center pt-5">
+                        <div class="col-6">
+                            <div class="d-flex flex-column">
+                                <div id="budi-dio-avanture" class="footer-text-left">Budi dio naše avanture</div>
+                                <div>
+                                    <a href="https://www.facebook.com/northtourmontenegro/">
+                                        <svg width="50" version="1.1" id="Design" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 800 800"
+                                            style="enable-background:new 0 0 800 800; fill: white;" xml:space="preserve"
+                                            class="mt-3 svg">
+                                            <g>
+                                                <g>
+                                                    <path class="st0"
+                                                        d="M407.9,700.6c-166.8,0-302.6-135.7-302.6-302.6c0-166.8,135.7-302.6,302.6-302.6
+                                                 c166.8,0,302.6,135.7,302.6,302.6C710.5,564.8,574.7,700.6,407.9,700.6z M407.9,128C259,128,137.9,249.1,137.9,398
+                                                 c0,148.9,121.1,270,270.1,270c148.9,0,270-121.1,270-270C678,249.1,556.8,128,407.9,128z" />
+                                                </g>
+                                                <g>
+                                                    <path class="st1"
+                                                        d="M360.5,399.4v175.4c0,2.5,2,4.6,4.6,4.6h65.1c2.5,0,4.6-2,4.6-4.6V396.6h47.2c2.4,0,4.4-1.8,4.6-4.2l4.5-53.7
+                                                 c0.2-2.7-1.9-5-4.6-5h-51.7v-38.1c0-8.9,7.2-16.2,16.2-16.2h36.4c2.5,0,4.6-2,4.6-4.6v-53.7c0-2.5-2-4.6-4.6-4.6h-61.5
+                                                 c-36.1,0-65.3,29.2-65.3,65.3v51.8h-32.6c-2.5,0-4.6,2-4.6,4.6V392c0,2.5,2,4.6,4.6,4.6h32.6V399.4z" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/northtourmontenegro/">
+                                        <svg width="50" version="1.1" id="Design" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 800 800"
+                                            style="enable-background:new 0 0 800 800; fill: white;" xml:space="preserve"
+                                            class="mt-3
+                                svg">
+
+
+                                            <g>
+                                                <path class="st0"
+                                                    d="M392.9,693.1c-164.9,0-299-134.1-299-299c0-164.9,134.1-299,299-299c164.9,0,299,134.1,299,299
+                                             C691.9,559,557.8,693.1,392.9,693.1z M392.9,123.6c-149.2,0-270.6,121.4-270.6,270.6c0,149.2,121.4,270.6,270.6,270.6
+                                             s270.6-121.4,270.6-270.6C663.5,245,542.1,123.6,392.9,123.6z M493.7,272.9c-12.2,0-22.1,9.9-22.1,22.1c0,12.2,9.9,22.1,22.1,22.1
+                                             s22.1-9.9,22.1-22.1C515.8,282.8,505.9,272.9,493.7,272.9z M395.4,301.2c-51.2,0-92.9,41.7-92.9,92.9s41.7,92.9,92.9,92.9
+                                             s92.9-41.7,92.9-92.9S446.6,301.2,395.4,301.2z M395.4,453.7c-32.8,0-59.5-26.7-59.5-59.5s26.7-59.5,59.5-59.5s59.5,26.7,59.5,59.5
+                                             S428.2,453.7,395.4,453.7z M582.9,316.9c0-62.6-50.8-113.3-113.4-113.3H319.9c-62.6,0-113.4,50.7-113.4,113.3v149.6
+                                             c0,62.6,50.7,113.3,113.4,113.3h149.6c62.6,0,113.4-50.7,113.4-113.3V316.9z M547.4,466.6c0,43-34.9,77.8-77.9,77.8H319.9
+                                             c-43,0-77.9-34.9-77.9-77.8V316.9c0-43,34.9-77.8,77.9-77.8h149.6c43,0,77.9,34.9,77.9,77.8V466.6z" />
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 form-info">
+                            <span>Mojkovacka bb, Kolasin</span>
+                            <br>
+                            <br>
+                            <span>
+                                <a href="tel:+382 67 046 880" target="_blank">
+                                    +382 67 046 880 </a>
+                            </span>
+                            <br>
+                            <span>
+                                <a href="tel:+382 20 862 952" target="_blank">
+                                    +382 20 862 952 </a>
+                            </span>
+                            <br>
+                            <span>
+                                <a href="tel:+382 67 022 033" target="_blank">
+                                    +382 67 022 033 </a>
+                            </span>
+                            <br>
+                            <br>
+                            <span>
+                                <a href="mailto:info@northtour.me" target="_blank">
+                                    info@northtour.me </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-5">
+                        <p id="pretplati-se-text">Pretplati se za bilten</p>
+                        <form action="" id="newsletter">
+                            <div class="row">
+                                <div class="col-lg-7 col-sm-8 offset-sm-2 pb-4">
+                                    <input type="email" name="email" id="emailNewsletter"
+                                        class="form-control text-center" placeholder="email">
+                                    <div class="error hide-error"></div>
+                                </div>
+                                <div class="col-lg-4 pb-4 text-center">
+                                    <input type="submit" class="btn button-yellow pretplati-se"
+                                        value="pretplati se"></input>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="map" class="col-lg-7 col-md-6 col-12 w-100" style="min-height: 420px; position: relative;">
+                </div>
+            </div>
+        </div>
+
+
+        <section id="footer2" style="background: #000; color: #fff">
+            <div class="container-fluid" id="footer2_change_width">
+                <div class="d-flex justify-content-between pt-3 footer-bottom">
+                    <p id="sva-prava">© All rights reserved 2019 Northtour</p>
+                    <p>Powered by
+                        <a href="https://www.amplitudo.me" style="color: rgb(46,174,169);">
+                            Amplitudo
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+    </footer>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script defer src="js/custom-js.js"></script>
+
+    <script>
+        function initMap() {
+
+            var locationCenter = {
+                lat: 42.538,
+                lng: 19.134
+            };
+            var location = {
+                lat: 42.538,
+                lng: 19.134
+            };
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 13,
+                center: locationCenter,
+
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA24MlF2C49kzFRdQLINiiBSZoBvF9HNm4&callback=initMap">
+    </script>
+
+    <script>
+        let nav = $(".navbar");
+
+        $(window).scroll(function () {
+            if ($(document).scrollTop() == 0 && window.innerWidth > 992) {
+                nav.addClass('index-top-nav')
+                nav.removeClass('white-nav');
+                $('#logo-image').attr('src', 'img/logo_white.png');
+            } else {
+
+                nav.removeClass('index-top-nav');
+                nav.addClass('white-nav');
+                $('#logo-image').attr('src', 'img/logo.png');
+            }
+        });
+
+        function language(language) {
+
+            if (language == "eng") {
+                document.getElementById('eng').classList.add('active-lang');
+                document.getElementById('cg').classList.remove('active-lang');
+            } else if (language == "cg") {
+                document.getElementById('cg').classList.add('active-lang');
+                document.getElementById('eng').classList.remove('active-lang');
+            }
+
+            $.ajax({
+                type: 'GET',
+                url: 'json/json-prevod.json',
+
+                success: function (response) {
+
+                    const json = JSON.parse(JSON.stringify(response[language]));
+                    const navLinkElements = document.querySelectorAll('.nav-item> a');
+                    const dropSlike = document.getElementById('slike-drop')
+                    const vasPouzdanDomacin = document.getElementById('vas-pouzdan-domacin');
+                    const oNama = document.getElementById('o-nama');
+
+                    const pretplatiSeButton = document.getElementsByClassName('pretplati-se')[0];
+                    const ponudeButton = document.getElementById('ponude-button');
+                    const opsirnijeButtons = document.getElementsByClassName('opsirnije-button');
+                    const pogledajJos = document.getElementById('pogledaj-jos')
+
+                    const ponude = document.getElementById('ponude');
+                    const dzipSafari = document.getElementById('dzip-safari');
+                    const biking = document.getElementById('biking');
+                    const hiking = document.getElementById('hiking');
+                    const kanjoning = document.getElementById('kanjoning');
+                    const rafting = document.getElementById('rafting');
+                    const ostalePonude = document.getElementById('ostale-ponude');
+
+                    const galerija = document.getElementById('galerija');
+
+                    const budiDioAvanture = document.getElementById('budi-dio-avanture');
+
+                    const pretplatiSe = document.getElementById('pretplati-se-text')
+                    const svaPrava = document.getElementById('sva-prava');
+
+
+                    navLinks = json.navbar;
+                    for (let index = 0; index < navLinkElements.length; ++index) {
+                        navLinkElements[index].text = navLinks[index];
+                    }
+                    dropSlike.text = json.navbarDropdown.slike;
+
+                    for (let index = 0; index < opsirnijeButtons.length; ++index) {
+                        opsirnijeButtons[index].innerHTML = json.buttons.opsirnije;
+                    }
+
+                    ponudeButton.innerHTML = json.buttons.ponude;
+                    pretplatiSeButton.value = json.buttons.pretplatiSe;
+                    pogledajJos.innerHTML = json.buttons.pogledajJos;
+
+                    oNama.innerHTML = json.oNama;
+                    vasPouzdanDomacin.innerHTML = json.vasPouzdanDomacin;
+
+                    ponude.innerHTML = json.ponude;
+                    dzipSafari.innerHTML = json.ponudeSection.dzipSafari.naslov;
+                    biking.innerHTML = json.ponudeSection.biking.naslov;
+                    hiking.innerHTML = json.ponudeSection.hiking.naslov;
+                    kanjoning.innerHTML = json.ponudeSection.kanjoning.naslov;
+                    rafting.innerHTML = json.ponudeSection.rafting.naslov;
+                    ostalePonude.innerHTML = json.ponudeSection.ostalePonude.naslov;
+
+                    galerija.innerHTML = json.galerija;
+
+                    budiDioAvanture.innerHTML = json.budiDioAvanture;
+                    pretplatiSe.innerHTML = json.pretplatiSeText;
+                    svaPrava.innerHTML = json.svaPrava;
+
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

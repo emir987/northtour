@@ -1,0 +1,231 @@
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+
+    .radno-iskustvo,
+    .dodaj {
+        font-size: 16px;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+    .btn-kreiraj {
+        width: 50% !important;
+    }
+}
+
+@media only screen and (max-width: 786px) {
+
+    .btn-kreiraj {
+        width: 80% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .btn-kreiraj {
+        width: 100% !important;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+    .my-form-row {
+        flex-direction: column !important;
+    }
+
+    .my-form-row div {
+        width: 100% !important;
+    }
+
+    .my-form-row div:last-child {
+        margin-top: 1.5rem;
+    }
+
+    #pretplati-se-text {
+        text-align: center;
+    }
+
+    .photo-text {
+        text-align: center !important;
+    }
+
+    .reverse-col-mobile {
+        flex-direction: column-reverse;
+    }
+
+    .navbar-nav {
+        margin-top: 0 !important;
+    }
+
+    .mobile-center {
+        justify-content: center;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: white !important;
+        text-align: center;
+        border-bottom: .5px solid rgba(73, 73, 73, 0.514);
+    }
+
+    .nav-item a {
+        color: black !important;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+    }
+
+    .carousel-section {
+        width: 70%;
+    }
+
+    .owl-prev {
+        left: -10%;
+    }
+
+    .owl-next {
+        right: -10%;
+    }
+
+    .item img {
+        width: 100%;
+        object-fit: cover !important;
+        transition: all 1s ease;
+    }
+
+    .response-mobile {
+        width: 100% !important;
+    }
+
+    #show_data {
+        flex-direction: column;
+    }
+
+    .show-first {
+        width: 100% !important;
+    }
+
+    .show-first div {
+        padding: 1.5rem 0 !important;
+    }
+
+    .show-right {
+        width: 100% !important;
+    }
+
+    .mobile-margin {
+        margin-top: 20px;
+    }
+
+    .footer-bottom div {
+        display: none;
+    }
+
+    .bez-iskustva {
+        padding-top: 0 !important;
+    }
+
+    .grid-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-footer div:nth-child(4) {
+        order: 1;
+    }
+
+    .grid-footer div:nth-child(2) {
+        order: 2;
+    }
+
+    .grid-footer div:nth-child(5) {
+        order: 3;
+    }
+
+    .grid-footer div:nth-child(3) {
+        order: 4;
+    }
+
+    .grid-footer div:nth-child(6) {
+        order: 5;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    .gallery-section>h1,
+    .video-gallery>h1 {
+        padding: 0 !important;
+        font-size: 2.7rem !important;
+    }
+
+    .owl-prev {
+        left: -15% !important;
+    }
+
+    .owl-next {
+        right: -15% !important;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-gallery-block {
+        display: block !important;
+    }
+
+    .mobile-gallery-none {
+        display: none;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 423px) {
+
+    .radno-iskustvo,
+    .dodaj {
+        font-size: 16px;
+    }
+
+    .pre-nav .info div {
+        font-size: 0.6em !important;
+        margin: 6px 0;
+        padding: 0 6px;
+    }
+
+    .icons-nav {
+        margin: 2px 5px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .pre-nav {
+        padding-top: 0 !important;
+    }
+
+    .icons-nav a {
+        margin: 0 2px !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .preferirani-lg {
+        display: none;
+    }
+
+    .preferirani-sm {
+        display: block !important;
+    }
+
+}

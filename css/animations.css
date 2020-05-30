@@ -1,0 +1,37 @@
+.animate-left {
+    position: relative;
+    animation: left-appear .8s ease;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes left-appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-right {
+    position: relative;
+    animation: right-appear .8s ease;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes right-appear {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
