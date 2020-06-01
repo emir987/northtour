@@ -1,14 +1,15 @@
 {
     "eng": {
-        "navbar": [
-            "Home",
-            "Offer",
-            "Gallery",
-            "About us",
-            "Contact"
-        ],
+        "navbar": {
+            "pocetna": "Home",
+            "ponuda": "Offer",
+            "galerija": "Gallery",
+            "oNama": "About us",
+            "kontakt": "Contact"
+        },
         "navbarDropdown": {
-            "slike": "pictures"
+            "slike": "pictures",
+            "video": "video"
         },
         "buttons": {
             "ponude": "offers",
@@ -66,15 +67,16 @@
 
     },
     "cg": {
-        "navbar": [
-            "Početna",
-            "Ponuda",
-            "Galerija",
-            "O nama",
-            "Kontakt"
-        ],
+        "navbar": {
+            "pocetna": "Početna",
+            "ponuda": "Ponuda",
+            "galerija": "Galerija",
+            "oNama": "O nama",
+            "kontakt": "Kontakt"
+        },
         "navbarDropdown": {
-            "slike": "slike"
+            "slike": "slike",
+            "video": "video"
         },
         "buttons": {
             "ponude": "ponude",

@@ -44,24 +44,24 @@
                     style="height: 65px;">
                     <ul class="navbar-nav ml-auto mt-4 mt-lg-0">
                         <li class="nav-item nav-item-bottom">
-                            <a class="nav-link" href="index.html">početna</a>
+                            <a id="pocetna" class="nav-link" href="index.html">početna</a>
                         </li>
                         <li class="nav-item nav-item-bottom">
-                            <a class="nav-link" href="ponuda.html">ponuda</a>
+                            <a id="ponuda" class="nav-link" href="ponuda.html">ponuda</a>
                         </li>
                         <li class="nav-item dropdown nav-item-bottom">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">galerija</a>
+                            <a id="galerija" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">galerija</a>
                             <ul class="dropdown-menu">
-                                <li><a id="slike-drop" href="galerija.html">slike</a></li>
-                                <li><a href="videoGalerija.html">video</a></li>
+                                <li><a id="drop-slike" id="slike-drop" href="galerija.html">slike</a></li>
+                                <li><a id="drop-video" href="videoGalerija.html">video</a></li>
                             </ul>
                         </li>
                         <li class="nav-item nav-item-bottom">
-                            <a class="nav-link" href="about.html">o nama</a>
+                            <a id="o-nama" class="nav-link" href="about.html">o nama</a>
                         </li>
                         <li class="nav-item nav-item-bottom">
-                            <a class="nav-link" href="kontakt.html">kontakt</a>
+                            <a id="kontakt" class="nav-link" href="kontakt.html">kontakt</a>
                         </li>
 
                         <li class="d-flex mobile-center">
@@ -286,7 +286,16 @@
         });
 
 
+        $(document).ready(function () {
+            const lng = localStorage.getItem("lng");
+            language(lng)
+        });
+
+
+
         function language(language) {
+
+            localStorage.setItem("lng", language);
 
             if (language == "eng") {
                 document.getElementById('eng').classList.add('active-lang');
@@ -303,8 +312,13 @@
                 success: function (response) {
 
                     const json = JSON.parse(JSON.stringify(response[language]));
-                    const navLinkElements = document.querySelectorAll('.nav-item> a');
-                    const dropSlike = document.getElementById('slike-drop');
+                    const pocetna = document.getElementById('pocetna');
+                    const ponuda = document.getElementById('ponuda');
+                    const galerija = document.getElementById('galerija');
+                    const dropSlike = document.getElementById('drop-slike');
+                    const dropVideo = document.getElementById('drop-video');
+                    const oNama = document.getElementById('o-nama');
+                    const kontakt = document.getElementById('kontakt')
 
                     const saznajViseButtons = document.getElementsByClassName('saznaj-vise');
                     const saznajVise = document.getElementById('sanzaj-vise')
@@ -325,13 +339,25 @@
                     const pretplatiSe = document.getElementById('pretplati-se-text')
                     const svaPrava = document.getElementById('sva-prava');
 
-                    console.log(navLinkElements[0]);
+                    pocetna.text = json.navbar.pocetna;
+                    pocetna.href = "index.html?lng=" + language;
 
-                    navLinks = json.navbar;
-                    for (let index = 0; index < navLinkElements.length; ++index) {
-                        navLinkElements[index].text = navLinks[index];
-                    }
+                    ponuda.text = json.navbar.ponuda;
+                    ponuda.href = "ponuda.html?lng=" + language;
+
+                    galerija.text = json.navbar.galerija;
+
                     dropSlike.text = json.navbarDropdown.slike;
+                    dropSlike.href = "galerija.html?lng=" + language;
+
+                    dropVideo.text = json.navbarDropdown.video;
+                    dropVideo.href = "videoGalerija.html?lng=" + language;
+
+                    oNama.text = json.navbar.oNama;
+                    oNama.href = "about.html?lng=" + language;
+
+                    kontakt.text = json.navbar.kontakt;
+                    kontakt.href = "kontakt.html?lng=" + language;
 
                     for (let index = 0; index < saznajViseButtons.length; ++index) {
                         saznajViseButtons[index].innerHTML = json.buttons.saznajVise;

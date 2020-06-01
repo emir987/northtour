@@ -65,24 +65,24 @@
                     style="height: 65px;">
                     <ul class="navbar-nav ml-auto mt-4 mt-lg-0">
                         <li class="nav-item nav-item-bottom">
-                            <a class="nav-link" href="#">početna</a>
+                            <a id="pocetna" class="nav-link" href="index.html">početna</a>
                         </li>
                         <li class="nav-item nav-item-bottom">
-                            <a class="nav-link" href="ponuda.html">ponuda</a>
+                            <a id="ponuda" class="nav-link" href="ponuda.html">ponuda</a>
                         </li>
                         <li class="nav-item dropdown nav-item-bottom">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">galerija</a>
+                            <a id="galerija" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">galerija</a>
                             <ul class="dropdown-menu">
-                                <li><a id="slike-drop" href="galerija.html">slike</a></li>
-                                <li><a href="videoGalerija.html">video</a></li>
+                                <li><a id="drop-slike" id="slike-drop" href="galerija.html">slike</a></li>
+                                <li><a id="drop-video" href="videoGalerija.html">video</a></li>
                             </ul>
                         </li>
                         <li class="nav-item nav-item-bottom">
-                            <a class="nav-link" href="about.html">o nama</a>
+                            <a id="o-nama" class="nav-link" href="about.html">o nama</a>
                         </li>
                         <li class="nav-item nav-item-bottom">
-                            <a class="nav-link" href="kontakt.html">kontakt</a>
+                            <a id="kontakt" class="nav-link" href="kontakt.html">kontakt</a>
                         </li>
 
                         <li class="d-flex mobile-center">
@@ -118,7 +118,7 @@
             <img src="img/ONamaBackground.svg" alt="">
             <div class="container">
                 <div class="section-o-nama-text">
-                    <h1 id="o-nama" class="header-text">O nama</h1>
+                    <h1 id="o-nama-text" class="header-text">O nama</h1>
                     <div class="description">
                         <p id="vas-pouzdan-domacin">North Tour Montenegro - Vas pouzdan domacin</p>
                         ...
@@ -201,7 +201,7 @@
 
 
         <div class="section-gallery">
-            <h1 id="galerija" class="header-text mb-5 text-center">Galerija</h1>
+            <h1 id="galerija-text" class="header-text mb-5 text-center">Galerija</h1>
 
             <div class="gallery">
                 <div>
@@ -429,7 +429,14 @@
             }
         });
 
+        $(document).ready(function () {
+            const lng = localStorage.getItem("lng");
+            language(lng);
+        });
+
         function language(language) {
+
+            localStorage.setItem("lng", language);
 
             if (language == "eng") {
                 document.getElementById('eng').classList.add('active-lang');
@@ -446,10 +453,15 @@
                 success: function (response) {
 
                     const json = JSON.parse(JSON.stringify(response[language]));
-                    const navLinkElements = document.querySelectorAll('.nav-item> a');
-                    const dropSlike = document.getElementById('slike-drop')
-                    const vasPouzdanDomacin = document.getElementById('vas-pouzdan-domacin');
+                    const pocetna = document.getElementById('pocetna');
+                    const ponuda = document.getElementById('ponuda');
+                    const galerija = document.getElementById('galerija');
+                    const dropSlike = document.getElementById('drop-slike');
+                    const dropVideo = document.getElementById('drop-video');
                     const oNama = document.getElementById('o-nama');
+                    const kontakt = document.getElementById('kontakt')
+                    const vasPouzdanDomacin = document.getElementById('vas-pouzdan-domacin');
+                    const oNamaText = document.getElementById('o-nama-text');
 
                     const pretplatiSeButton = document.getElementsByClassName('pretplati-se')[0];
                     const ponudeButton = document.getElementById('ponude-button');
@@ -464,7 +476,7 @@
                     const rafting = document.getElementById('rafting');
                     const ostalePonude = document.getElementById('ostale-ponude');
 
-                    const galerija = document.getElementById('galerija');
+                    const galerijaText = document.getElementById('galerija-text');
 
                     const budiDioAvanture = document.getElementById('budi-dio-avanture');
 
@@ -472,11 +484,26 @@
                     const svaPrava = document.getElementById('sva-prava');
 
 
-                    navLinks = json.navbar;
-                    for (let index = 0; index < navLinkElements.length; ++index) {
-                        navLinkElements[index].text = navLinks[index];
-                    }
+                    pocetna.text = json.navbar.pocetna;
+                    pocetna.href = "index.html?lng=" + language;
+
+                    ponuda.text = json.navbar.ponuda;
+                    ponuda.href = "ponuda.html?lng=" + language;
+
+                    galerija.text = json.navbar.galerija;
+
                     dropSlike.text = json.navbarDropdown.slike;
+                    dropSlike.href = "galerija.html?lng=" + language;
+
+                    dropVideo.text = json.navbarDropdown.video;
+                    dropVideo.href = "videoGalerija.html?lng=" + language;
+
+                    oNama.text = json.navbar.oNama;
+                    oNama.href = "about.html?lng=" + language;
+
+                    kontakt.text = json.navbar.kontakt;
+                    kontakt.href = "kontakt.html?lng=" + language;
+
 
                     for (let index = 0; index < opsirnijeButtons.length; ++index) {
                         opsirnijeButtons[index].innerHTML = json.buttons.opsirnije;
@@ -486,7 +513,7 @@
                     pretplatiSeButton.value = json.buttons.pretplatiSe;
                     pogledajJos.innerHTML = json.buttons.pogledajJos;
 
-                    oNama.innerHTML = json.oNama;
+                    oNamaText.innerHTML = json.oNama;
                     vasPouzdanDomacin.innerHTML = json.vasPouzdanDomacin;
 
                     ponude.innerHTML = json.ponude;
@@ -497,7 +524,7 @@
                     rafting.innerHTML = json.ponudeSection.rafting.naslov;
                     ostalePonude.innerHTML = json.ponudeSection.ostalePonude.naslov;
 
-                    galerija.innerHTML = json.galerija;
+                    galerijaText.innerHTML = json.galerija;
 
                     budiDioAvanture.innerHTML = json.budiDioAvanture;
                     pretplatiSe.innerHTML = json.pretplatiSeText;
